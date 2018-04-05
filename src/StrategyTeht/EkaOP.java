@@ -5,6 +5,7 @@
  */
 package StrategyTeht;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -13,9 +14,13 @@ import java.util.List;
  */
 public class EkaOP implements ListConverter{
 
+    //Iteraattorilla, jokaisen alkion jälkeen rivivaihto
     @Override
-    public String listToString(List list) {
-        
+    public void listToString(List list) {
+        Iterator<String> crunchifyIterator = list.iterator();
+            while (crunchifyIterator.hasNext()) {
+                System.out.println(crunchifyIterator.next() + "\n");
+            }
     }
     
 }

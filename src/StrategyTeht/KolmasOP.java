@@ -13,9 +13,15 @@ import java.util.List;
  */
 public class KolmasOP implements ListConverter{
 
+    //for-loop ja joka kolmas alkio rivinvaihto
     @Override
-    public String listToString(List list) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void listToString(List list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (i % 3 == 0) {
+                System.out.println("\n");
+            }
+            System.out.println(list.get(i));
+        }
     }
     
 }

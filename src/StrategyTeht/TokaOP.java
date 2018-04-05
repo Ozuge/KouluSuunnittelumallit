@@ -14,8 +14,13 @@ import java.util.List;
 public class TokaOP implements ListConverter{
 
     @Override
-    public String listToString(List list) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void listToString(List list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (i % 2 == 0 ) {
+                System.out.println("\n");
+            }
+            System.out.println(list.get(i));
+        }
     }
     
 }

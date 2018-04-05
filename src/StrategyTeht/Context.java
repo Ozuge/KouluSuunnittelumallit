@@ -5,13 +5,21 @@
  */
 package StrategyTeht;
 
+import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author ottoj_000
  */
-public interface ListConverter {
-   public void listToString(List list);
-    
+public class Context {
+   
+    private ListConverter muuntaja;
+
+   public Context(ListConverter muuntaja){
+      this.muuntaja = muuntaja;
+   }
+
+   public void executeStrategy(List list){
+        muuntaja.listToString(list);
+   }
 }
