@@ -1,0 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Visitor;
+
+/**
+ *
+ * @author ottoj_000
+ */
+public interface State {
+    public void ilmoittaudu(Context context);
+    public void accept(PalkanmaksajaIF palkanmaksaja);
+    public void asiakaskysely(Context context);
+}
